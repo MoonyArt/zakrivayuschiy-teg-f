@@ -15,6 +15,7 @@
         repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
         linear-gradient(#e7e7e7, #e7e7e7 0.01%, #1a1a1a);
     --bg-color: #fff;
+    --shadow-color: rgba(255 255 255 / 0.5);
     --border-color: #000;
     --element-border: 2px solid var(--border-color);
 }

@@ -86,6 +86,10 @@
   line-height: 1.17;
 }
 
+.card__image-wrapper {
+  position: relative;
+}
+
 .card__image {
   display: block;
   inline-size: 100%;
@@ -94,6 +98,27 @@
   object-position: center;
   aspect-ratio: 1/1;
   border-block: var(--element-border);
+}
+
+.card__label {
+  position: absolute;
+  inset-block-start: 25px;
+  inset-inline-end: 25px;
+  font-family: var(--accent-font-family), sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: 0 0 1px var(--shadow-color);
+  mix-blend-mode: hard-light;
+}
+
+@supports((text-stroke: 1px rgba(255 255 255 / 0.5)) or (-webkit-text-stroke: 1px rgba(255 255 255 / 0.5))) {
+  .card__label {
+    -webkit-text-stroke: 1px var(--shadow-color);
+    text-stroke: 1px var(--shadow-color);
+    text-shadow: none;
+  }
 }
 
 .card__button-group {
