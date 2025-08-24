@@ -28,7 +28,7 @@
 /* Стили для шапки сайта */
 
 .header {
-  padding-block-start: var(--page-padding);
+  padding-block: var(--block-padding);
 }
 
 .header__cover {
@@ -55,3 +55,73 @@
 }
 
 /* Стили для основной секции */
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--article-gap);
+  padding-block-end: var(--block-padding);
+}
+
+/* Стили для карточек */
+
+.card {
+  background-color: var(--bg-color);
+  border: var(--element-border);
+}
+
+.card__title {
+  font-size: var(--text-font-size);
+  line-height: 1;
+  font-variation-settings: 'wght' var(--title-font-weight);
+  padding: 4px 10px;
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
+  padding: var(--card-padding);
+  font-size: var(--text-font-size);
+  line-height: 1.17;
+}
+
+.card__image {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1/1;
+  border-block: var(--element-border);
+}
+
+.card__button-group {
+  display: flex;
+  gap: 5px;
+  align-self: flex-end;
+}
+
+.button {
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  line-height: 0.9;
+  font-weight: 400;
+  background-color: transparent;
+  border: var(--element-border);
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.like-icon {
+  display: block;
+}
+
+.card__like-button {
+  inline-size: 130px;
+  padding: 10px;
+}
