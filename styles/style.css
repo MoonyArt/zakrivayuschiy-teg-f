@@ -19,3 +19,39 @@
   font-family: var(--main-font-family), sans-serif;
   font-variation-settings: 'wght' var(--text-font-weight);
 }
+
+.block-layout {
+  margin-inline: auto;
+  inline-size: var(--block-width);
+}
+
+/* Стили для шапки сайта */
+
+.header {
+  padding-block-start: var(--page-padding);
+}
+
+.header__cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-block: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem);
+  background-color: var(--bg-color);
+  border: var(--element-border);
+  font-family: var(--accent-font-family), sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.header__cover-logo {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  font-weight: 400;
+}
+
+.header__cover-title {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  font-weight: 400;
+}
+
+/* Стили для основной секции */
