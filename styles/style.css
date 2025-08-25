@@ -36,7 +36,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding-block: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem);
+  padding-block: clamp(7.5rem, 7.2799rem + 0.939vw, 8.125rem);
   background-color: var(--bg-color);
   border: var(--element-border);
   font-family: var(--accent-font-family), sans-serif;
@@ -72,9 +72,9 @@
 
 .card__title {
   font-size: var(--text-font-size);
-  line-height: 1;
+  line-height: 1.2;
   font-variation-settings: 'wght' var(--title-font-weight);
-  padding: 4px 10px;
+  padding: 5px 10px;
 }
 
 .card__description {
@@ -88,6 +88,7 @@
 
 .card__image-wrapper {
   position: relative;
+  border-block: var(--element-border);
 }
 
 .card__image {
@@ -97,7 +98,6 @@
   object-fit: cover;
   object-position: center;
   aspect-ratio: 1/1;
-  border-block: var(--element-border);
 }
 
 .card__label {
@@ -134,12 +134,14 @@
   font-weight: 400;
   background-color: transparent;
   border: var(--element-border);
+  cursor: pointer;
 }
 
 .card__icon-button {
   background-color: transparent;
   border: none;
   padding: 0;
+  cursor: pointer;
 }
 
 .like-icon {
@@ -149,4 +151,10 @@
 .card__like-button {
   inline-size: 130px;
   padding: 10px;
+}
+
+/* Стилизация кнопки сохранения */
+
+.main-content__save-button {
+  background-color: var(--bg-color);
 }
