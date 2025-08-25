@@ -28,7 +28,8 @@
 /* Стили для шапки сайта */
 
 .header {
-  padding-block: var(--block-padding);
+  padding-block-start: var(--block-padding);
+  padding-block-end: 98px;
 }
 
 .header__cover {
@@ -157,8 +158,8 @@
 
 .main-content__save-button {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
   background-color: var(--bg-color);
@@ -169,8 +170,8 @@
 
 .main-content__icon-floppy {
   display: block;
-  inline-size: 28px;
-  aspect-ratio: 1 / 1;
+  inline-size: 21px;
+  block-size: 21px;
 }
 
 /* Стили для модального окна */
@@ -178,12 +179,12 @@
 .dialog[open] {
   display: grid;
   grid-template-columns: min-content 1fr;
+  align-items: center;
   column-gap: 18px;
   row-gap: 30px;
   inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
   border: var(--element-border);
-  padding-block: var(--dialog-padding);
-  padding-inline: 40px;
+  padding: var(--dialog-padding);
 }
 
 .dialog::backdrop {
@@ -193,7 +194,7 @@
 .dialog__icon-floppy {
   display: block;
   inline-size: 39px;
-  aspect-ratio: 1 / 1;
+  block-size: 39px;
 }
 
 .dialog__text {
@@ -214,3 +215,21 @@
   text-transform: uppercase;
 }
 
+@media (width <= 375px) {
+  .header {
+    padding-block-end: var(--block-padding);
+  }
+  .main-content__save-button {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-content__icon-floppy {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+
+  .dialog[open] {
+    padding-inline: 40px;
+  }
+}
