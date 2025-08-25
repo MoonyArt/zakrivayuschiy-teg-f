@@ -5,10 +5,12 @@
     --title-font-weight: 715;
     --text-font-weight: 410;
     --text-font-size: 18px;
+    --button-font-size: 14px;
     --block-padding: 100px;
     --article-gap: 50px;
     --card-padding: 25px;
     --card-gap: 25px;
+    --dialog-padding: 30px;
     --block-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
     --bg-image: 
         repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
@@ -18,4 +20,5 @@
     --shadow-color: rgba(255 255 255 / 0.5);
     --border-color: #000;
     --element-border: 2px solid var(--border-color);
+    --backdrop-color: rgba(0 0 0 / 0.75);
 }
