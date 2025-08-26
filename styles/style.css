@@ -101,6 +101,38 @@
   aspect-ratio: 1/1;
 }
 
+.card__image_wrongness {
+  filter: saturate(110%);
+}
+
+.card__image_whiteness {
+  filter: grayscale(1);
+}
+
+.card__image_readiness {
+  filter: invert(0.9);
+}
+
+.card__image_perfectness {
+  filter: saturate(140%);
+}
+
+.card__image_thankfulness {
+  filter: hue-rotate(-30deg) sepia(20%);
+}
+
+.card__image_heaviness {
+  filter: hue-rotate(-25deg);
+}
+
+.card__image_accurateness {
+  filter: contrast(120%);
+}
+
+.card__image_brightness {
+  filter: brightness(150%);
+}
+
 .card__label {
   position: absolute;
   inset-block-start: 25px;
