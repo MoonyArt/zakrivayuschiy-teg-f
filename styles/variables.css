@@ -22,4 +22,6 @@
     --border-color: #000;
     --element-border: 2px solid var(--border-color);
     --backdrop-color: rgba(0 0 0 / 0.75);
+    --heart-contour-color: #000;
+    --animation-fill-color: #f00;
 }

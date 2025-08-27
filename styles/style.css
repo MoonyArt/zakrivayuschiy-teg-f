@@ -202,6 +202,15 @@
   color: var(--diff-button-color);
 }
 
+.like-icon {
+  display: block;
+}
+
+.card__like-button {
+  inline-size: 130px;
+  padding: 10px;
+}
+
 .card__icon-button {
   background-color: transparent;
   border: 2px solid rgba(0 0 0 / 0);
@@ -218,13 +227,8 @@
   border-color: rgba(0 0 0 / 1);
 }
 
-.like-icon {
-  display: block;
-}
-
-.card__like-button {
-  inline-size: 130px;
-  padding: 10px;
+.like-icon .sparks {
+  opacity: 0;
 }
 
 /* Стили для кнопки сохранения */
