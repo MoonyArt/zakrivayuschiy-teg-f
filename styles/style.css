@@ -13,44 +13,44 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-image: var(--bg-image);
+  background-image: var(--bg-image, 
+    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7, #e7e7e7 0.01%, #1a1a1a));
   background-attachment: fixed;
   background-size: cover;
-  font-family: var(--main-font-family), sans-serif;
+  font-family: var(--main-font-family, 'Inter-Variable'), sans-serif;
   font-variation-settings: 'wght' var(--text-font-weight);
 }
 
 .block-layout {
   margin-inline: auto;
-  inline-size: var(--block-width);
+  inline-size: var(--block-width, clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem));
 }
 
 /* Стили для шапки сайта */
 
 .header {
-  padding-block-start: var(--block-padding);
-  padding-block-end: 98px;
-}
-
-.header__cover {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding-block: clamp(7.5rem, 7.2799rem + 0.939vw, 8.125rem);
-  background-color: var(--bg-color);
-  border: var(--element-border);
-  font-family: var(--accent-font-family), sans-serif;
+  font-family: var(--accent-font-family, 'PressStart2P'), sans-serif;
   line-height: 1;
   text-transform: uppercase;
+  margin-block-start: var(--block-margin);
+  margin-block-end: 98px;
+  background-color: var(--bg-color, #fff);
+  border: var(--element-border);
+  padding-block: clamp(7.5rem, 7.2799rem + 0.939vw, 8.125rem);
 }
 
-.header__cover-logo {
+.header__logo {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   font-weight: 400;
 }
 
-.header__cover-title {
+.header__title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   font-weight: 400;
 }
@@ -61,13 +61,13 @@
   display: flex;
   flex-direction: column;
   gap: var(--article-gap);
-  padding-block-end: var(--block-padding);
+  margin-block-end: var(--block-margin);
 }
 
 /* Стили для карточек */
 
 .card {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, #fff);
   border: var(--element-border);
 }
 
@@ -163,11 +163,11 @@
 .button {
   position: relative;
   font-family: var(--accent-font-family);
-  font-size: var(--button-font-size);
+  font-size: var(--button-font-size, 14px);
   line-height: 0.9;
   font-weight: 400;
   background-color: transparent;
-  border: var(--element-border);
+  border: var(--element-border, 2px solid #000);
   cursor: pointer;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
@@ -187,7 +187,7 @@
   inline-size: 100%;
   block-size: 100%;
   inset: 0;
-  background-color: var(--border-color);
+  background-color: var(--border-color, #000);
   transform: translateX(-100%);
   transition: 0.5s ease-in-out;
 }
@@ -196,10 +196,10 @@
   transform: translateX(0);
 }
 
-.button:hover .button__text {
+.button .button__text {
   position: relative;
   mix-blend-mode: difference;
-  color: var(--diff-button-color);
+  color: var(--diff-button-color, #fff);
 }
 
 .card__like-button {
@@ -248,37 +248,37 @@
 /* Переходы и анимация при взаимодействии с иконкой сердца */
 
 .like-icon:hover .core {
-  fill: var(--heart-contour-color);
+  fill: var(--heart-contour-color, #000);
   transition: fill 0.3s linear;
 }
 
 .like-icon:hover .main-body {
-  fill: var(--heart-contour-color);
+  fill: var(--heart-contour-color, #000);
   transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon:active .core {
-  fill: var(--animation-fill-color);
+  fill: var(--animation-fill-color, #f00);
   transition: fill 0.3s linear;
 }
 
 .like-icon:active .main-body {
-  fill: var(--animation-fill-color);
+  fill: var(--animation-fill-color, #f00);
   transition: fill 0.3s linear 0.05s;
 } 
 
 .like-icon.is-liked .core {
-  fill: var(--animation-fill-color);
+  fill: var(--animation-fill-color, #f00);
   transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--animation-fill-color);
+  fill: var(--animation-fill-color, #f00);
   transition: fill 0.3s linear 0.05s;
 } 
 
 .like-icon.is-liked .contour {
-  fill: var(--animation-fill-color);
+  fill: var(--animation-fill-color, #f00);
   transition: fill 0.3s linear 0.06s;
 }
 
@@ -299,7 +299,7 @@
   justify-content: center;
   gap: 8px;
   inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, #fff);
   margin-inline: auto;
   padding-block: 16px;
   padding-inline: 10px;
@@ -311,10 +311,10 @@
   block-size: 21px;
 }
 
-.button:hover .icon-floppy {
+.button .icon-floppy {
   position: relative;
   mix-blend-mode: difference;
-  fill: var(--diff-button-color);
+  fill: var(--diff-button-color, #fff);
 }
 
 /* Стили для модального окна */
@@ -360,8 +360,9 @@
 
 @media (width <= 375px) {
   .header {
-    padding-block-end: var(--block-padding);
+    margin-block-end: var(--block-margin);
   }
+
   .main-content__save-button {
     flex-direction: column;
     align-items: center;
